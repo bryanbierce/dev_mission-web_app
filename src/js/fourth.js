@@ -2,17 +2,20 @@
 document.addEventListener("DOMContentLoaded", function(e) {
   // Assign an onClick handler to the request button
   getFirstElementOfClassNameAndAssignClickHandler("request-button", function(e) {
-
+    // TODO: REPLACE ME
+    console.log("In request button handler")
   })
 
   // Assign an onClick handler to the timeout button
   getFirstElementOfClassNameAndAssignClickHandler("request-button", function(e) {
-
+    // TODO: REPLACE ME
+    console.log("In timeout button handler")
   })
 
   // Assign an onClick handler to the asynchronous request button
   getFirstElementOfClassNameAndAssignClickHandler("async-button", function(e) {
-
+    // TODO: REPLACE ME
+    console.log("In async request button handler")
   })
 })
 

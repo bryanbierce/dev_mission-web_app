@@ -68,6 +68,7 @@ table {
 }
 
 .app .button-container > button {
+	width: 300px;
 	padding: 12px;
 }
 
