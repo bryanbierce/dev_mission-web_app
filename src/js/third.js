@@ -29,10 +29,12 @@ document.addEventListener("DOMContentLoaded", function(e) {
     const colorArray = JSON.parse(colorArrayString)
 
     // If there are colors stored in the Array
-    if colorArray.length > 0 {
-      // Set the pages background color to the last value in the array
-      // Remember indexes start at 0 so the last index is 1 less than its length
-      setBackgroundColor(colorArray[colorArray.length - 1])
+    if (colorArray.length > 0) {
+      // Loop over each color in the array
+      colorArray.forEach((color) => {
+        // For each color, create a div and append it to the page
+        createColorDivAndAppendToPage(color)
+      })
     }
     // If there is no color history then we don't need to change the background
   }
@@ -49,8 +51,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
     // Get the color from the input box
     const color = inputBox.value
 
-    // Set the color as the background
-    setBackgroundColor(color)
+    createColorDivAndAppendToPage(color)
 
     // Get the array of colors as a string from LocalStorage
     // Pass the stringified array to JSON.parse to turn back into an Array
@@ -64,6 +65,23 @@ document.addEventListener("DOMContentLoaded", function(e) {
   })
 
 })
+
+function createColorDivAndAppendToPage(color) {
+  // Create a div element
+  const newColorDiv = document.createElement("div")
+  // Create a text element
+  const colorText = document.createTextNode(`The color is ${color}`)
+  // Put the text element in the div
+  newColorDiv.appendChild(colorText)
+  // Set div styles
+  newColorDiv.style.width = "400px"
+  newColorDiv.style.color = color
+  newColorDiv.style.border = `1px solid ${color}`
+
+  // Put the div at the end of the 'app' container
+  const app = document.getElementsByClassName("app")[0]
+  app.appendChild(newColorDiv)
+}
 
 function setBackgroundColor(color) {
   // Assign the color as the CSS 'background' value directly on the <body>

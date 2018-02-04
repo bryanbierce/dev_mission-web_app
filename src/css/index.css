@@ -48,3 +48,22 @@ table {
 .app {
 
 }
+
+.app > h1 {
+	font-size: 32px;
+	width: 100%;
+	margin: 24px 0;
+}
+
+.app .center {
+	text-align: center
+}
+
+.app .button-container {
+	margin-bottom: 16px;
+}
+
+.app .button-container > button {
+	padding: 12px;
+}
+
