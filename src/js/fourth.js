@@ -9,6 +9,11 @@ document.addEventListener("DOMContentLoaded", function(e) {
   getFirstElementOfClassNameAndAssignClickHandler("request-button", function(e) {
 
   })
+
+  // Assign an onClick handler to the asynchronous request button
+  getFirstElementOfClassNameAndAssignClickHandler("async-button", function(e) {
+
+  })
 })
 
 
