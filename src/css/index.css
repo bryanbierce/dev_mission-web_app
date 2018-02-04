@@ -59,6 +59,10 @@ table {
 	text-align: center
 }
 
+.app .link-container {
+	margin-bottom: 8px;
+}
+
 .app .button-container {
 	margin-bottom: 16px;
 }
